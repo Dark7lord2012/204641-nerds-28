@@ -34,7 +34,10 @@
     <main class="main">
       <section class="main-filter">
         <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
-        <!-- Тут будет форма фильтров -->
+        <form action="https://echo.htmlacademy.ru" class="main-filter__form">
+          <!-- Тут будут чекбоксы и радиобатоны -->
+        </form>
+
       </section>
 
       <section class="sort-filter">
@@ -179,5 +182,29 @@
         Скидка 10% для друзей из социальных сетей.
       </p>
     </footer>
+
+    <!-- Модальное окно "Напишите нам" -->
+    <section class="modal-callback">
+      <h2 class="modal-callback">Напишите нам</h2>
+
+      <form action="https://echo.htmlacademy.ru" class="modal-callback__form">
+        <label class="modal-callback__label">
+          <p>Ваше имя:</p>
+          <input class="modal-callback__input-text" type="text" placeholder="Имя Фамилия">
+        </label>
+
+        <label class="modal-callback__label">
+          <p>Ваш email:</p>
+          <input class="modal-callback__input-text" type="text" placeholder="email@example.com">
+        </label>
+
+        <label class="modal-callback__label">
+          <p>Текст письма</p>
+          <textarea class="modal-callback__textarea" placeholder="В свободной форме"></textarea>
+        </label>
+
+        <button class="modal-callback__btn-submit" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>

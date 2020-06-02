@@ -171,7 +171,7 @@
         <h2 class="visually-hidden">Карта</h2>
 
         <img class="map__image" src="img/map.png" width="1440" height="416"  alt="Карта">
-        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCQdu8V22C" width="1440" height="416"></iframe>
+        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCQdu8V22C" width="1440" height="416" aria-label="Интерактивная карта"></iframe>
 
         <h3 class="map__title">Nёrds Design Studio</h3>
         <address class="map__address">191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8</address>
@@ -205,5 +205,29 @@
         Скидка 10% для друзей из социальных сетей.
       </p>
     </footer>
+
+    <!-- Модальное окно "Напишите нам" -->
+    <section class="modal-callback">
+      <h2 class="modal-callback">Напишите нам</h2>
+
+      <form action="https://echo.htmlacademy.ru" class="modal-callback__form">
+        <label class="modal-callback__label">
+          <p>Ваше имя:</p>
+          <input class="modal-callback__input-text" type="text" placeholder="Имя Фамилия">
+        </label>
+
+        <label class="modal-callback__label">
+          <p>Ваш email:</p>
+          <input class="modal-callback__input-text" type="text" placeholder="email@example.com">
+        </label>
+
+        <label class="modal-callback__label">
+          <p>Текст письма</p>
+          <textarea class="modal-callback__textarea" placeholder="В свободной форме"></textarea>
+        </label>
+
+        <button class="modal-callback__btn-submit" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
