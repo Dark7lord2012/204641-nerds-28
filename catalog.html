@@ -35,7 +35,63 @@
       <section class="main-filter">
         <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
         <form action="https://echo.htmlacademy.ru" class="main-filter__form">
-          <!-- Тут будут чекбоксы и радиобатоны -->
+          <fieldset class="main-filter__fieldset">
+            <legend>Стоимость:</legend>
+
+            <!-- Тут будет шкала с 2 двумя ползунками -->
+            <label class="main-filter__label-number">
+              От
+              <input class="main-filter__number" type="number" name="start-price" min="0" max="100000">
+            </label>
+            <label class="main-filter__label-number">
+              До
+              <input class="main-filter__number" type="number" name="end-price" min="0" max="100000">
+            </label>
+          </fieldset>
+
+          <fieldset class="main-filter__fieldset">
+            <legend>Сетка:</legend>
+
+            <label class="main-filter__label">
+              <input class="main-filter__input-radio" type="radio" name="grid" value="adaptive">
+              Адаптивная
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-radio" type="radio" name="grid" value="fixed">
+              Фиксированная
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-radio" type="radio" name="grid" value="rubbery">
+              Резиновый
+            </label>
+          </fieldset>
+
+          <fieldset class="main-filter__fieldset">
+            <legend>Особенности:</legend>
+
+            <label class="main-filter__label">
+              <input class="main-filter__input-checkbox" type="checkbox" name="slider">
+              Слайдер
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-checkbox" type="checkbox" name="block-advantages">
+              Блок преимуществ
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-checkbox" type="checkbox" name="news">
+              Новости
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-checkbox" type="checkbox" name="gallery">
+              Галерея
+            </label>
+            <label class="main-filter__label">
+              <input class="main-filter__input-checkbox" type="checkbox" name="basket">
+              Корзина
+            </label>
+          </fieldset>
+
+          <button class="main-filter__btn-submit">Показать</button>
         </form>
 
       </section>
