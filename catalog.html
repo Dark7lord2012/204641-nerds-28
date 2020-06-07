@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
     <title>Нёрдс — Магазин готовых шаблонов</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -36,7 +38,7 @@
         <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
         <form action="https://echo.htmlacademy.ru" class="main-filter__form">
           <fieldset class="main-filter__fieldset">
-            <legend>Стоимость:</legend>
+            <legend class="main-filter__fieldset-title">Стоимость:</legend>
 
             <!-- Тут будет шкала с 2 двумя ползунками -->
             <label class="main-filter__label-number">
@@ -50,7 +52,7 @@
           </fieldset>
 
           <fieldset class="main-filter__fieldset">
-            <legend>Сетка:</legend>
+            <legend class="main-filter__fieldset-title">Сетка:</legend>
 
             <label class="main-filter__label">
               <input class="main-filter__input-radio" type="radio" name="grid" value="adaptive">
@@ -67,7 +69,7 @@
           </fieldset>
 
           <fieldset class="main-filter__fieldset">
-            <legend>Особенности:</legend>
+            <legend class="main-filter__fieldset-title">Особенности:</legend>
 
             <label class="main-filter__label">
               <input class="main-filter__input-checkbox" type="checkbox" name="slider">
@@ -100,8 +102,8 @@
         <h2 class="sort-filter__title">Сортировать:</h2>
 
         <ul class="sort-filter__list-of-links">
-          <li class="sort-filter__link">
-            <a href="#">По цене</a>
+          <li class="sort-filter__link sort-filter__link--active">
+            <a>По цене</a>
           </li>
           <li class="sort-filter__link">
             <a href="#">По типу</a>
@@ -185,8 +187,8 @@
         </ul>
 
         <ul class="patters__pagination">
-          <li class="patterns__pagination-item">
-            <a href="#">1</a>
+          <li class="patterns__pagination-item patterns__pagination-item--active">
+            <a>1</a>
           </li>
           <li class="patterns__pagination-item">
             <a href="#">2</a>
@@ -255,7 +257,7 @@
         </label>
 
         <label class="modal-callback__label">
-          Текст письма
+          Текст письма:
           <textarea class="modal-callback__textarea" name="comment" placeholder="В свободной форме"></textarea>
         </label>
 
