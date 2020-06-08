@@ -6,6 +6,7 @@
   --white: #ffffff;
   --black-grey: #283136;
   --text-grey: #666666;
+  --text-grey-two: #444444;
 
   --coral-red: #fb565a;
   --coral-red-hover: #e74246;
@@ -22,13 +23,6 @@
 
 body {
   font-family: "Roboto", "Arial", sans-serif;
-}
-
-
-/* Временно */
-
-.modal-callback {
-  display: none;
 }
 
 /* =============== Шапка =============== */
@@ -349,8 +343,8 @@ body {
   opacity: 0.6;
 }
 
-.sort-filter__link a:active { /* Не работает*/
-  opacity: 1.0;
+.sort-filter__link:active a:active { /* Странный селектор? */
+  opacity: 1;
 }
 
 /* Pattern */
@@ -409,7 +403,7 @@ body {
 }
 
 .patterns__pagination-item--active a {
-
+  background-color: var(--white);
 }
 
 .patterns__pagination-item a:hover,
@@ -419,4 +413,59 @@ body {
 
 .patterns__pagination-item a:active {
   background-color: var(--back-grey-active);
+}
+
+/* Modal Callback */
+
+.modal-callback__title {
+  font-size: 45px;
+  line-height: 53px;
+  font-weight: bold;
+}
+
+.modal-callback__label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.modal-callback__label input {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: inherit;
+  color: var(--text-grey-two);
+}
+
+.modal-callback__btn-submit {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+
+  background-color: var(--coral-red);
+}
+
+.modal-callback__btn-submit:hover,
+.modal-callback__btn-submit:focus {
+  background-color: var(--coral-red-hover);
+}
+
+.modal-callback__btn-submit:active {
+  background-color: var(--coral-red-active);
+}
+
+.modal-callback__btn-close {
+  opacity: 0.3;
+}
+
+.modal-callback__btn-close:hover,
+.modal-callback__btn-close:focus {
+  opacity: 1;
+}
+
+.modal-callback__btn-close:active {
+  opacity: 0.1;
 }
