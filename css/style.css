@@ -380,7 +380,7 @@
 
 .main__wrapper--catalog {
   display: grid;
-  grid-template-columns: 260px 310px 310px;
+  grid-template-columns: 260px 760px;
   column-gap: 140px;
   grid-template-rows: min-content min-content min-content;
 }
@@ -447,7 +447,7 @@
   outline: 2px solid orangered;
   outline-offset: -2px;
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -499,7 +499,7 @@
   outline: 2px solid orangered;
   outline-offset: -2px;
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
 }
 
 .patterns__list {
