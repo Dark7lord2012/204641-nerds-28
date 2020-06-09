@@ -1,206 +1,210 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <title>Нёрдс — Магазин готовых шаблонов</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="header">
-      <a href="index.html" class="header__link-logo">
-        <img class="header__logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
-      </a>
+      <div class="header__wrapper wrapper">
+        <a href="index.html" class="header__link-logo">
+          <img class="header__logo" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
+        </a>
 
-      <nav class="header__main-nav main-nav">
-        <ul class="main-nav__site-list site-list">
-          <li class="site-list__item">
-            <a href="#">Студия</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Клиенты</a>
-          </li>
-          <li class="site-list__item">
-            <a>Магазин</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="header__main-nav main-nav">
+          <ul class="main-nav__site-list site-list">
+            <li class="site-list__item">
+              <a href="#">Студия</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Клиенты</a>
+            </li>
+            <li class="site-list__item">
+              <a>Магазин</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
 
-      <a href="#" class="header__link-to-basket">Корзина</a>
-      <h1 class="header__title">Магазин готовых шаблонов</h1>
+        <a href="#" class="header__link-to-basket">Корзина</a>
+        <h1 class="header__title">Магазин готовых шаблонов</h1>
+      </div>
     </header>
 
-    <main class="main">
-      <section class="main-filter">
-        <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
-        <form action="https://echo.htmlacademy.ru" class="main-filter__form">
-          <fieldset class="main-filter__fieldset">
-            <legend class="main-filter__fieldset-title">Стоимость:</legend>
+    <main class="main main--catalog">
+      <div class="main__wrapper--catalog wrapper">
+        <section class="main-filter">
+          <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
+          <form action="https://echo.htmlacademy.ru" class="main-filter__form">
+            <fieldset class="main-filter__fieldset">
+              <legend class="main-filter__fieldset-title">Стоимость:</legend>
 
-            <!-- Тут будет шкала с 2 двумя ползунками -->
-            <label class="main-filter__label-number">
-              От
-              <input class="main-filter__number" type="number" name="start-price" min="0" max="100000">
-            </label>
-            <label class="main-filter__label-number">
-              До
-              <input class="main-filter__number" type="number" name="end-price" min="0" max="100000">
-            </label>
-          </fieldset>
+              <!-- Тут будет шкала с 2 двумя ползунками -->
+              <label class="main-filter__label-number">
+                От
+                <input class="main-filter__number" type="number" name="start-price" min="0" max="100000">
+              </label>
+              <label class="main-filter__label-number">
+                До
+                <input class="main-filter__number" type="number" name="end-price" min="0" max="100000">
+              </label>
+            </fieldset>
 
-          <fieldset class="main-filter__fieldset">
-            <legend class="main-filter__fieldset-title">Сетка:</legend>
+            <fieldset class="main-filter__fieldset">
+              <legend class="main-filter__fieldset-title">Сетка:</legend>
 
-            <label class="main-filter__label">
-              <input class="main-filter__input-radio" type="radio" name="grid" value="adaptive">
-              Адаптивная
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-radio" type="radio" name="grid" value="fixed">
-              Фиксированная
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-radio" type="radio" name="grid" value="rubbery">
-              Резиновый
-            </label>
-          </fieldset>
+              <label class="main-filter__label">
+                <input class="main-filter__input-radio" type="radio" name="grid" value="adaptive">
+                Адаптивная
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-radio" type="radio" name="grid" value="fixed">
+                Фиксированная
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-radio" type="radio" name="grid" value="rubbery">
+                Резиновый
+              </label>
+            </fieldset>
 
-          <fieldset class="main-filter__fieldset">
-            <legend class="main-filter__fieldset-title">Особенности:</legend>
+            <fieldset class="main-filter__fieldset">
+              <legend class="main-filter__fieldset-title">Особенности:</legend>
 
-            <label class="main-filter__label">
-              <input class="main-filter__input-checkbox" type="checkbox" name="slider">
-              Слайдер
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-checkbox" type="checkbox" name="block-advantages">
-              Блок преимуществ
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-checkbox" type="checkbox" name="news">
-              Новости
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-checkbox" type="checkbox" name="gallery">
-              Галерея
-            </label>
-            <label class="main-filter__label">
-              <input class="main-filter__input-checkbox" type="checkbox" name="basket">
-              Корзина
-            </label>
-          </fieldset>
+              <label class="main-filter__label">
+                <input class="main-filter__input-checkbox" type="checkbox" name="slider">
+                Слайдер
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-checkbox" type="checkbox" name="block-advantages">
+                Блок преимуществ
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-checkbox" type="checkbox" name="news">
+                Новости
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-checkbox" type="checkbox" name="gallery">
+                Галерея
+              </label>
+              <label class="main-filter__label">
+                <input class="main-filter__input-checkbox" type="checkbox" name="basket">
+                Корзина
+              </label>
+            </fieldset>
 
-          <button class="main-filter__btn-submit">Показать</button>
-        </form>
+            <button class="main-filter__btn-submit">Показать</button>
+          </form>
 
-      </section>
+        </section>
 
-      <section class="sort-filter">
-        <h2 class="sort-filter__title">Сортировать:</h2>
+        <section class="sort-filter">
+          <h2 class="sort-filter__title">Сортировать:</h2>
 
-        <ul class="sort-filter__list-of-links">
-          <li class="sort-filter__link sort-filter__link--active">
-            <a>По цене</a>
-          </li>
-          <li class="sort-filter__link">
-            <a href="#">По типу</a>
-          </li>
-          <li class="sort-filter__link">
-            <a href="#">По названию</a>
-          </li>
-          <li class="sort-filter__link">
-            <a href="#">По убыванию</a>
-          </li>
-          <li class="sort-filter__link">
-            <a href="#">По возрастанию</a>
-          </li>
-        </ul>
-      </section>
+          <ul class="sort-filter__list-of-links">
+            <li class="sort-filter__link sort-filter__link--active">
+              <a>По цене</a>
+            </li>
+            <li class="sort-filter__link">
+              <a href="#">По типу</a>
+            </li>
+            <li class="sort-filter__link">
+              <a href="#">По названию</a>
+            </li>
+            <li class="sort-filter__link">
+              <a href="#">По убыванию</a>
+            </li>
+            <li class="sort-filter__link">
+              <a href="#">По возрастанию</a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="patterns">
-        <h2 class="visually-hidden">Список шаблонов</h2>
+        <section class="patterns">
+          <h2 class="visually-hidden">Список шаблонов</h2>
 
-        <ul class="patterns__list">
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">Sedona</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-sedona.png" width="358" height="578" alt="Фото сайта Седона">
-            <p class="pattern__description">
-              Информационный сайт для туристов
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">Pink</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-pink.png" width="358" height="578" alt="Фото сайта Pink">
-            <p class="pattern__description">
-              Cайт приложения фильтра розового цвета
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">Barbershop Borodinski</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-barbershop.png" width="358" height="578" alt="Фото сайта Барбершопа>">
-            <p class="pattern__description">
-              Сайт барбершопа для бородачей
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">Mishka</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-mishka.png" width="358" height="578" alt="Фото сайта Седона">
-            <p class="pattern__description">
-              Милые штуки ручной работы для дома
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">А+</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-aplus.png" width="358" height="578" alt="Фото сайта Седона">
-            <p class="pattern__description">
-              Обучающий сайт для образования
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-          <li class="patterns__list-item pattern">
-            <h3 class="pattern__title">
-              <a href="#">Кваст</a>
-            </h3>
-            <img class="pattern__photo" src="img/img-kvast.png" width="358" height="578" alt="Фото сайта Седона">
-            <p class="pattern__description">
-              Продуктовый сайт для продажи крафтового пива
-            </p>
-            <button class="pattern__btn-price">9 900 ₽</button>
-          </li>
-        </ul>
+          <ul class="patterns__list">
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">Sedona</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-sedona.png" width="358" height="578" alt="Фото сайта Седона">
+              <p class="pattern__description">
+                Информационный сайт для туристов
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">Pink</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-pink.png" width="358" height="578" alt="Фото сайта Pink">
+              <p class="pattern__description">
+                Cайт приложения фильтра розового цвета
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">Barbershop Borodinski</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-barbershop.png" width="358" height="578" alt="Фото сайта Барбершопа>">
+              <p class="pattern__description">
+                Сайт барбершопа для бородачей
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">Mishka</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-mishka.png" width="358" height="578" alt="Фото сайта Седона">
+              <p class="pattern__description">
+                Милые штуки ручной работы для дома
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">А+</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-aplus.png" width="358" height="578" alt="Фото сайта Седона">
+              <p class="pattern__description">
+                Обучающий сайт для образования
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+            <li class="patterns__list-item pattern">
+              <h3 class="pattern__title">
+                <a href="#">Кваст</a>
+              </h3>
+              <img class="pattern__photo" src="img/img-kvast.png" width="358" height="578" alt="Фото сайта Седона">
+              <p class="pattern__description">
+                Продуктовый сайт для продажи крафтового пива
+              </p>
+              <button class="pattern__btn-price">9 900 ₽</button>
+            </li>
+          </ul>
 
-        <ul class="patters__pagination">
-          <li class="patterns__pagination-item patterns__pagination-item--active">
-            <a>1</a>
-          </li>
-          <li class="patterns__pagination-item">
-            <a href="#">2</a>
-          </li>
-          <li class="patterns__pagination-item">
-            <a href="#">3</a>
-          </li>
-          <li class="patterns__pagination-item">
-            <a href="#">Следующая</a>
-          </li>
-        </ul>
-      </section>
+          <ul class="patterns__pagination">
+            <li class="patterns__pagination-item patterns__pagination-item--active">
+              <a>1</a>
+            </li>
+            <li class="patterns__pagination-item">
+              <a href="#">2</a>
+            </li>
+            <li class="patterns__pagination-item">
+              <a href="#">3</a>
+            </li>
+            <li class="patterns__pagination-item">
+              <a href="#">Следующая</a>
+            </li>
+          </ul>
+        </section>
+      </div>
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
@@ -217,28 +221,31 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__social social">
-        <h3 class="social__list">Социальные сети</h3>
-        <ul class="social-list">
-          <li class="social-list-item">
-            <a href="#">ВКонтакте</a>
-          </li>
-          <li class="social-list-item">
-            <a href="#">Фейсбук</a>
-          </li>
-          <li class="social-list-item">
-            <a href="#">Инстаграмм</a>
-          </li>
-        </ul>
+      <div class="footer__wrapper wrapper">
+        <div class="footer__social social">
+          <h3 class="social__list">Социальные сети</h3>
+          <ul class="social-list">
+            <li class="social-list-item">
+              <a href="#">ВКонтакте</a>
+            </li>
+            <li class="social-list-item">
+              <a href="#">Фейсбук</a>
+            </li>
+            <li class="social-list-item">
+              <a href="#">Инстаграмм</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__slogan">
+          <p class="footer__text-slogan">
+            Давайте дружить, это выгодно!
+          </p>
+          <p class="footer__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
       </div>
-
-      <p class="footer__text-slogan">
-        Давайте дружить, это выгодно!
-      </p>
-
-      <p class="footer__text">
-        Скидка 10% для друзей из социальных сетей.
-      </p>
     </footer>
 
     <!-- Модальное окно "Напишите нам" -->
