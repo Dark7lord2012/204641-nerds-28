@@ -20,8 +20,8 @@
   --yellow-hover: #eab534;
   --yellow-active: #e5a722;
 
-  --wrapper-padding: 140px;
-  --desktop-width: 1440px;
+  --wrapper-padding: 20px;
+  --desktop-width: 1200px;
 }
 
 .page {
