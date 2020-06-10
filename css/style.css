@@ -141,6 +141,7 @@
   padding-top: 78px;
   outline: 2px solid blue;
   outline-offset: -2px;
+  box-sizing: border-box;
 }
 
 .slide--active {
@@ -272,13 +273,31 @@
 
 /* Description Nerds */
 
+.description-nerds__wrapper {
+  display: flex;
+}
+
+.description-nerds__table-logo-wrapper {
+  width: 660px;
+  outline: 2px solid orange;
+  outline-offset: -2px;
+}
+
+.description-nerds__text-wrapper {
+  widows: 360px;
+  margin-right: 140px;
+
+  outline: 1px solid orange;
+  outline-offset: -2px;
+}
+
 .description-nerds__text-slogan {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
-.description-nerds__text-pinciples {
+.description-nerds__text-principles {
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
@@ -307,13 +326,32 @@
   text-transform: uppercase;
 }
 
+.description-nerds__static-table {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.description-nerds__static-table li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
 .description-nerds__static-table-field {
+  order: 1;
+  margin: 0;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
 }
 
 .description-nerds__static-table-value {
+  margin: 0;
+
   font-size: 45px;
   line-height: 64px;
   font-weight: bold;
