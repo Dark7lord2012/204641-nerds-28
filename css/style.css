@@ -746,18 +746,56 @@
 
 .modal-callback {
   display: none;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* display: flex; */
+  flex-wrap: wrap;
+  width: 960px;
+  min-height: 590px;
+  box-sizing: border-box;
+  padding: 63px 100px 84px;
+  border: 1px solid black;
+
+  background-color: var(--white);
 }
 
+.modal-callback__form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 .modal-callback__title {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 37px;
+
   font-size: 45px;
   line-height: 53px;
   font-weight: bold;
 }
 
 .modal-callback__label {
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
+}
+
+.modal-callback__label--name,
+.modal-callback__label--email {
+  width: 50%;
+}
+
+.modal-callback__label--text {
+  width: 100%;
 }
 
 .modal-callback__label input {
@@ -789,6 +827,13 @@
 }
 
 .modal-callback__btn-close {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+
+  width: 21px;
+  height: 21px;
+
   opacity: 0.3;
 }
 
