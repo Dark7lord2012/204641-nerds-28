@@ -59,7 +59,7 @@
   grid-template-columns: 160px 4fr 1fr; /* Пропорции примерные*/
   align-items: center;
   column-gap: 50px;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .header__link-logo {
@@ -319,6 +319,10 @@
   color: var(--text-grey);
 }
 
+.map__iframe {
+  border: none;
+}
+
 .map__btn-open-modal {
   font-size: 16px;
   line-height: 18px;
@@ -348,8 +352,8 @@
 
 .footer__wrapper {
   display: flex;
-  padding-top: 68px;
-  padding-bottom: 68px;
+  margin-top: 68px;
+  margin-bottom: 68px;
 }
 
 .footer__social {
@@ -490,6 +494,21 @@
 }
 
 .sort-filter__link:active a:active { /* Странный селектор? */
+  opacity: 1;
+}
+
+.sort-filter__order-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-filter__order-link {
+  opacity: 0.2;
+}
+
+.sort-filter__order-link--active {
   opacity: 1;
 }
 
