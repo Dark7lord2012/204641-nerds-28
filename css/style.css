@@ -122,18 +122,46 @@
 /* Slider */
 
 .promo-slider {
+  min-height: 545px;
+
   background-color: var(--back-grey);
   outline: 2px solid red;
   outline-offset: -2px;
 }
 
+.promo-slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: none;
+  min-height: 545px;
+  padding-top: 78px;
+  outline: 2px solid blue;
+  outline-offset: -2px;
+}
+
+.slide--active {
+  display: block;
+}
+
 .slide__title {
+  width: 560px;
+  margin-top: 0;
+  margin-bottom: 37px;
+
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
 }
 
 .slide__text {
+  width: 416px;
+  margin-top: 0;
+  margin-bottom: 26px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
