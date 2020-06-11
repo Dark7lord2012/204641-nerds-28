@@ -147,8 +147,9 @@ input[type="radio"].visually-hidden {
   color: var(--coral-red);
 }
 
-.site-list a:active {
-  color: inherit;
+.site-list a:active,
+.header__link-to-basket:active span{
+  /* color: inherit; */
   opacity: 0.3;
 }
 
@@ -738,7 +739,7 @@ input[type="radio"].visually-hidden {
   grid-template-columns: 260px 760px;
   column-gap: 140px;
   grid-template-rows: min-content min-content min-content;
-  padding-top: 55px;
+  padding-top: 56px;
   padding-bottom: 60px;
 }
 
@@ -754,9 +755,109 @@ input[type="radio"].visually-hidden {
 .main-filter__fieldset {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  border: none;
+  outline: 1px solid green;
 }
 
+.main-filter__fieldset--price {
+  height: 210px;
+  box-sizing: border-box;
+  margin-bottom: 54px;
+
+  outline: 1px solid red;
+}
+
+/* Радио переключатели */
+
+.main-filter__fieldset--grid {
+  margin-bottom: 43px;
+}
+
+.main-filter__fieldset--grid .main-filter__label + .main-filter__label {
+  margin-top: 15px;
+}
+
+.main-filter__text-radio::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  content: "";
+  margin-right: 10px;
+  margin-left: -2px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+
+  opacity: 0.4;
+}
+
+.main-filter__label:hover .main-filter__text-radio:not(:disabled)::before,
+.main-filter__input-radio:focus ~ .main-filter__text-radio:not(:disabled)::before {
+  opacity: 1;
+}
+
+.main-filter__input-radio:checked ~ .main-filter__text-radio::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.main-filter__input-radio:disabled ~ .main-filter__text-radio::before,
+.main-filter__input-radio:disabled ~ .main-filter__text-radio {
+  opacity: 0.1;
+}
+
+/* Чекбоксы */
+
+.main-filter__fieldset--features {
+  margin-bottom: 48px;
+}
+
+.main-filter__fieldset--features .main-filter__label + .main-filter__label {
+  margin-top: 17px;
+}
+
+.main-filter__text-checkbox::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  height: 23px;
+  content: "";
+  margin-left: -2px;
+  margin-right: 10px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: left center;
+
+  opacity: 0.4;
+}
+
+.main-filter__label:hover .main-filter__text-checkbox:not(:disabled)::before,
+.main-filter__input-checkbox:focus ~ .main-filter__text-checkbox:not(:disabled)::before {
+  opacity: 1;
+}
+
+.main-filter__input-checkbox:checked ~ .main-filter__text-checkbox::before {
+  background-image: url("../img/checkbox-on.svg");
+  background-position: center center;
+  background-size: 26px 23px;
+}
+
+.main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox::before,
+.main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox {
+  opacity: 0.1;
+}
+
+/* Параметры текста заголовков основного фильтра */
+
 .main-filter__fieldset-title {
+  margin-bottom: 13px;
+  margin-left: -2px;
+  padding: 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
@@ -788,7 +889,16 @@ input[type="radio"].visually-hidden {
   color: var(--black-grey);
 }
 
+.main-filter__label + .main-filter__label {
+  margin-top: 16px;
+}
+
 .main-filter__btn-submit {
+  display: block;
+  border: none;
+  width: 100%;
+  padding: 16px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -809,9 +919,12 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 48px;
 }
 
 .sort-filter__title {
+  margin: 0;
+
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;

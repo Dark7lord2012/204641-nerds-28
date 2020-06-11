@@ -48,7 +48,7 @@
         <section class="main-filter">
           <h2 class="visually-hidden">Поиск шаблонов по фильтру</h2>
           <form action="https://echo.htmlacademy.ru" class="main-filter__form">
-            <fieldset class="main-filter__fieldset">
+            <fieldset class="main-filter__fieldset main-filter__fieldset--price">
               <legend class="main-filter__fieldset-title">Стоимость:</legend>
 
               <!-- Тут будет шкала с 2 двумя ползунками -->
@@ -62,45 +62,45 @@
               </label>
             </fieldset>
 
-            <fieldset class="main-filter__fieldset">
+            <fieldset class="main-filter__fieldset main-filter__fieldset--grid">
               <legend class="main-filter__fieldset-title">Сетка:</legend>
 
               <label class="main-filter__label">
-                <input class="main-filter__input-radio" type="radio" name="grid" value="adaptive">
-                Адаптивная
+                <input class="visually-hidden main-filter__input-radio" type="radio" name="grid" value="adaptive">
+                <span class="main-filter__text-radio">Адаптивная</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-radio" type="radio" name="grid" value="fixed">
-                Фиксированная
+                <input class="visually-hidden main-filter__input-radio" type="radio" name="grid" value="fixed">
+                <span class="main-filter__text-radio">Фиксированная</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-radio" type="radio" name="grid" value="rubbery">
-                Резиновый
+                <input class="visually-hidden main-filter__input-radio" type="radio" name="grid" value="rubbery">
+                <span class="main-filter__text-radio">Резиновый</span>
               </label>
             </fieldset>
 
-            <fieldset class="main-filter__fieldset">
+            <fieldset class="main-filter__fieldset main-filter__fieldset--features">
               <legend class="main-filter__fieldset-title">Особенности:</legend>
 
               <label class="main-filter__label">
-                <input class="main-filter__input-checkbox" type="checkbox" name="slider">
-                Слайдер
+                <input class="visually-hidden main-filter__input-checkbox" type="checkbox" name="slider">
+                <span class="main-filter__text-checkbox">Слайдер</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-checkbox" type="checkbox" name="block-advantages">
-                Блок преимуществ
+                <input class="visually-hidden main-filter__input-checkbox" type="checkbox" name="block-advantages">
+                <span class="main-filter__text-checkbox">Блок преимуществ</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-checkbox" type="checkbox" name="news">
-                Новости
+                <input class="visually-hidden main-filter__input-checkbox" type="checkbox" name="news">
+                <span class="main-filter__text-checkbox">Новости</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-checkbox" type="checkbox" name="gallery">
-                Галерея
+                <input class="visually-hidden main-filter__input-checkbox" type="checkbox" name="gallery">
+                <span class="main-filter__text-checkbox">Галерея</span>
               </label>
               <label class="main-filter__label">
-                <input class="main-filter__input-checkbox" type="checkbox" name="basket">
-                Корзина
+                <input class="visually-hidden main-filter__input-checkbox" type="checkbox" name="basket">
+                <span class="main-filter__text-checkbox">Корзина</span>
               </label>
             </fieldset>
 
