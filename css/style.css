@@ -1,6 +1,7 @@
 :root {
   --back-grey: #eeeeee;
   --back-grey-two: #e1e1e1;
+  --back-grey-three: #c1c1c1;
   --back-grey-hover: #dfdfdf;
   --back-grey-active: #d5d5d5;
   --black: #000000;
@@ -48,23 +49,37 @@
   outline: 1px dashed black;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* =============== Шапка =============== */
 
 .header {
   background-color: var(--back-grey);
-  outline: 2px solid red;
 }
 
 .header__wrapper {
   display: grid;
-  grid-template-columns: 160px 4fr 1fr; /* Пропорции примерные*/
+  grid-template-columns: 160px 5fr 1fr; /* Пропорции примерные*/
   align-items: center;
   column-gap: 50px;
-  margin-top: 50px;
+  margin-top: 48px;
 }
 
-.header__link-logo {
-  outline: 2px solid green;
+.header__main-nav {
+  margin-left: 100px;
 }
 
 .site-list {
@@ -75,24 +90,47 @@
   align-self: center;
 
   list-style: none;
-  outline: 2px solid green;
 }
 
 .header__link-to-basket {
-  outline: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin-top: 12px;
+  margin-left: 50px;
+  box-sizing: border-box;
+}
+
+.header__svg-basket {
+  margin-right: 24px;
+}
+
+.site-list {
+  margin-top: 27px;
+  padding-left: 52px;
+}
+
+.site-list__item {
+  margin-right: 46px;
+}
+
+.site-list__item--active a{
+  border-bottom: 2px solid var(--coral-red);
 }
 
 .site-list a {
-  outline: 2px solid blue;
-  margin-right: 45px;
+  display: block;
+  padding-bottom: 13px;
 }
 
 .site-list a,
 .header__link-to-basket {
   font-size: 16px;
   line-height: 30px;
-  font-weight: 500; /* medium не работает*/
+  font-weight: 500;
   color: var(--black);
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -111,6 +149,8 @@
 .header__title {
   grid-column-start: 1;
   grid-column-end: 4;
+  margin-top: 72px;
+  margin-right: 18px;
 
   font-size: 55px;
   line-height: 55px;
@@ -123,11 +163,12 @@
 /* Slider */
 
 .promo-slider {
-  min-height: 545px;
-
   background-color: var(--back-grey);
-  outline: 2px solid red;
   outline-offset: -2px;
+}
+
+.promo-slider__wrapper {
+  position: relative;
 }
 
 .promo-slider__list {
@@ -136,13 +177,79 @@
   list-style: none;
 }
 
+.promo-slider__btn-list {
+  position: absolute;
+  bottom: 97px;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.promo-slider__btn-list-item {
+  position: relative;
+}
+
+.promo-slider__btn-list-item + .promo-slider__btn-list-item{
+  margin-left: 17px;
+}
+
+.promo-slider__btn {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: none;
+
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+
+
+.promo-slider__btn--active::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid var(--back-grey-three);
+
+  content: "";
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+/* Слайд  */
+
 .slide {
   display: none;
-  min-height: 545px;
-  padding-top: 78px;
-  outline: 2px solid blue;
-  outline-offset: -2px;
+  min-height: 428px;
+  padding-top: 74px;
   box-sizing: border-box;
+
+  background-repeat: no-repeat;
+}
+
+.slide--1 {
+  background-image: url("../img/nerds-index-slide1-1.png");
+  background-position: calc(100% - 3px) calc(50% - 2px);
+}
+
+.slide--2 {
+  background-image: url("../img/nerds-index-slide2-1.png");
+  background-position: calc(100% - 3px) calc(50% - 2px);
+}
+
+.slide--3 {
+  background-image: url("../img/nerds-index-slide3-1.png");
+  background-position: calc(100% - 3px) calc(50% - 2px);
 }
 
 .slide--active {
@@ -150,9 +257,9 @@
 }
 
 .slide__title {
-  width: 560px;
+  width: 520px;
   margin-top: 0;
-  margin-bottom: 37px;
+  margin-bottom: 27px;
 
   font-size: 55px;
   line-height: 55px;
@@ -162,7 +269,7 @@
 .slide__text {
   width: 416px;
   margin-top: 0;
-  margin-bottom: 26px;
+  margin-bottom: 55px;
 
   font-size: 16px;
   line-height: 24px;
@@ -170,6 +277,9 @@
 }
 
 .slide__link-to-more {
+  padding: 16px 55px;
+  box-sizing: border-box;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -636,7 +746,12 @@
 }
 
 .sort-filter__order-link {
+  display: block;
+  width: 11px;
+  height: 10px;
+
   opacity: 0.2;
+  outline: 1px solid red;
 }
 
 .sort-filter__order-link--active {
