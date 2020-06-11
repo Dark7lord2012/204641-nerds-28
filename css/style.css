@@ -302,9 +302,10 @@ input[type="radio"].visually-hidden {
 
 /* Services */
 
-.services {
-  outline: 2px solid red;
-  outline-offset: -2px;
+.services__wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid var(--back-grey);
 }
 
 .services__list {
@@ -315,14 +316,30 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
-  outline: 2px solid blue;
 }
 
 .service {
-  outline: 2px solid orange;
+  padding-top: 146px;
+
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.service--1 {
+  background-image: url("../img/illustration-1-1.png");
+}
+
+.service--2 {
+  background-image: url("../img/illustration-2-1.png");
+}
+
+.service--3 {
+  background-image: url("../img/illustration-3-1.png");
 }
 
 .service__title {
+  margin-bottom: 16px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -330,12 +347,19 @@ input[type="radio"].visually-hidden {
 }
 
 .service__description {
+  margin-top: 0;
+  margin-bottom: 32px;
+  padding-right: 20px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
 }
 
 .service__link-order {
+  display: inline-block;
+  padding: 16px 40px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -386,6 +410,7 @@ input[type="radio"].visually-hidden {
 
 .description-nerds__wrapper {
   display: flex;
+  padding-top: 40px;
 }
 
 .description-nerds__table-logo-wrapper {
@@ -403,23 +428,39 @@ input[type="radio"].visually-hidden {
 }
 
 .description-nerds__text-slogan {
+  margin-top: 35px;
+  margin-bottom: 32px;
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
 .description-nerds__text-principles {
+  margin-top: 0;
+  margin-bottom: 40px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
 }
 
 .description-nerds__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--black-grey);
+}
+
+.description-nerds__list-services {
+  margin: 0;
+  padding-left: 0px;
+
+  list-style: none;
 }
 
 .description-nerds__list-services-item {
@@ -429,7 +470,30 @@ input[type="radio"].visually-hidden {
   color: var(--black-grey);
 }
 
+.description-nerds__list-services-item::before {
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  margin-right: 7px;
+  content: "";
+  vertical-align: middle;
+
+  background-color: var(--coral-red);
+}
+
+.description-nerds__list-services-item + .description-nerds__list-services-item {
+  margin-top: 24px;
+}
+
+.description-nerds__logo {
+  margin-bottom: 33px;
+}
+
 .description-nerds__table-title {
+  margin-top: 0;
+  margin-bottom: 31px;
+  margin-left: 1px;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
