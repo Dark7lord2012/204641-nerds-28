@@ -269,28 +269,32 @@
     </footer>
 
     <!-- Модальное окно "Напишите нам" -->
-    <section class="modal-callback">
+    <!-- modal-callback--opened — класс для показа модалки -->
+    <section class="modal-callback ">
       <h2 class="modal-callback__title">Напишите нам</h2>
 
       <form action="https://echo.htmlacademy.ru" class="modal-callback__form">
         <label class="modal-callback__label modal-callback__label--name">
           Ваше имя:
-          <input class="modal-callback__input-text" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="modal-callback__input-text" type="text" name="name" placeholder="Имя Фамилия" required>
         </label>
 
         <label class="modal-callback__label modal-callback__label--email">
           Ваш email:
-          <input class="modal-callback__input-text" type="email" name="email" placeholder="email@example.com">
+          <input class="modal-callback__input-text" type="email" name="email" placeholder="email@example.com" required>
         </label>
 
         <label class="modal-callback__label modal-callback__label--text">
           Текст письма
-          <textarea class="modal-callback__textarea" name="comment" placeholder="В свободной форме"></textarea>
+          <textarea class="modal-callback__textarea" name="comment" placeholder="В свободной форме" required></textarea>
         </label>
 
         <button class="modal-callback__btn-submit" type="submit">Отправить</button>
       </form>
-      <button class="modal-callback__btn-close" type="button">Закрыть</button>
+
+      <button class="modal-callback__btn-close" type="button">
+        <div class="visually-hidden">Закрыть</div>
+      </button>
     </section>
   </body>
 </html>

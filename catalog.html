@@ -283,6 +283,7 @@
     </footer>
 
     <!-- Модальное окно "Напишите нам" -->
+    <!-- modal-callback--opened — класс для показа модалки -->
     <section class="modal-callback">
       <h2 class="modal-callback__title">Напишите нам</h2>
 
@@ -303,8 +304,11 @@
         </label>
 
         <button class="modal-callback__btn-submit" type="submit">Отправить</button>
-        <button class="modal-callback__btn-close" type="button">Закрыть</button>
       </form>
+
+      <button class="modal-callback__btn-close" type="button">
+        <div class="visually-hidden">Закрыть</div>
+      </button>
     </section>
   </body>
 </html>
