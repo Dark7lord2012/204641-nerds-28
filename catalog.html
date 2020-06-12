@@ -55,14 +55,33 @@
               <legend class="main-filter__fieldset-title">Стоимость:</legend>
 
               <!-- Тут будет шкала с 2 двумя ползунками -->
-              <label class="main-filter__label-number">
-                От
-                <input class="main-filter__number" type="number" name="start-price" min="0" max="100000">
-              </label>
-              <label class="main-filter__label-number">
-                До
-                <input class="main-filter__number" type="number" name="end-price" min="0" max="100000">
-              </label>
+              <div class="main-filter__range range">
+                <div class="range__controls">
+                  <div class="range__scale">
+                    <div class="range__bar" style="
+                      width: 70%;
+                      margin-left: 0%;
+                    "></div>
+                  </div>
+                  <div class="range__toggle range__toggle--min" tabindex="0" style="
+                    left: 0%;
+                  "></div>
+                  <div class="range__toggle range__toggle--max" tabindex="0" style="
+                    left: 70%;
+                  "></div>
+                </div>
+              </div>
+
+              <div class="main-filter__price-controls">
+                <label class="main-filter__label-number">
+                  От
+                  <input class="main-filter__number" type="number" name="start-price" min="0" max="19999" value="0">
+                </label>
+                <label class="main-filter__label-number">
+                  До
+                  <input class="main-filter__number" type="number" name="end-price" min="0" max="20000" value="15000">
+                </label>
+              </div>
             </fieldset>
 
             <fieldset class="main-filter__fieldset main-filter__fieldset--grid">
@@ -246,8 +265,8 @@
         <div class="map__wrapper wrapper">
           <div class="map__contacts">
             <h3 class="map__title">Nёrds Design Studio</h3>
-            <address class="map__address">191186, Санкт-Петербург,<br> ул. Большая Конюшенная, д. 19/8</address>
-            <a href="tel:+78122757575" class="map__phone">+7 (812) 275-75-75</a>
+            <address class="map__address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+            <a href="tel:+78122757575" class="map__phone">тел. +7 (812) 275-75-75</a>
             <a class="map__btn-open-modal" href="#">Напишите нам</a>
           </div>
         </div>
@@ -322,7 +341,7 @@
       </form>
 
       <button class="modal-callback__btn-close" type="button">
-        <div class="visually-hidden">Закрыть</div>
+        <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
   </body>
