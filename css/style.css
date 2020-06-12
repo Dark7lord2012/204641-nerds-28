@@ -1085,19 +1085,18 @@ input[type="radio"].visually-hidden {
 /* Sort Filter */
 
 .sort-filter {
-  outline: 2px solid orangered;
   outline-offset: -2px;
   grid-column-start: 2;
   grid-column-end: 3;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 48px;
 }
 
 .sort-filter__title {
+  width: 50%;
   margin: 0;
+  margin-right: auto;
 
   font-size: 18px;
   line-height: 30px;
@@ -1106,7 +1105,11 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-filter__list-of-links {
+  transform: translateY(-2px); /* Pixel Perfect*/
   display: flex;
+  width: 300px;
+  margin-left: auto;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1138,14 +1141,22 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-filter__order-links {
+  transform: translateY(-2px); /* Pixel Perfect*/
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px;
   margin: 0;
+  margin-left: 20px;
   padding: 0;
   list-style: none;
 }
 
 .sort-filter__order-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 11px;
   height: 10px;
 
