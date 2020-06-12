@@ -16,6 +16,7 @@
   --text-grey: #666666;
   --text-grey-two: #444444;
   --browser: #4d4d4d;
+  --logo-active: #a6a6a6;
 
   --coral-red: #fb565a;
   --coral-red-hover: #e74246;
@@ -85,6 +86,14 @@ input[type="radio"].visually-hidden {
   margin-top: 48px;
 }
 
+.header__link-logo:hover {
+  cursor: pointer;
+}
+
+.header__link-logo:active path {
+  fill: var(--logo-active);
+}
+
 .header__main-nav {
   margin-left: 100px;
 }
@@ -152,6 +161,7 @@ input[type="radio"].visually-hidden {
 .site-list a:active,
 .header__link-to-basket:active span{
   /* color: inherit; */
+  color: var(--black);
   opacity: 0.3;
 }
 
@@ -306,8 +316,9 @@ input[type="radio"].visually-hidden {
 }
 
 .slide__link-to-more:active {
-  color: rgba(255, 255, 255, 0.3); /* Так не хватает функции rgba() из scss*/
+  color: rgba(255, 255, 255, 0.3);
   background-color: var(--coral-red-active);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 /* Services */
@@ -388,6 +399,7 @@ input[type="radio"].visually-hidden {
 .service__link-order:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: var(--coral-red-active);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .service__link-order--green {
@@ -710,6 +722,10 @@ input[type="radio"].visually-hidden {
   background-color: var(--coral-red-hover);
 }
 
+.social__link:active {
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
 .social__link:active .social__svg {
   opacity: 0.3;
 }
@@ -807,7 +823,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-filter__input-radio:disabled ~ .main-filter__text-radio::before,
-.main-filter__input-radio:disabled ~ .main-filter__text-radio {
+.main-filter__input-radio:hover:disabled ~ .main-filter__text-radio::before,
+.main-filter__input-radio:disabled ~ .main-filter__text-radio,
+.main-filter__input-radio:hover:disabled ~ .main-filter__text-radio {
   opacity: 0.1;
 }
 
@@ -850,7 +868,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox::before,
-.main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox {
+.main-filter__input-checkbox:hover:disabled ~ .main-filter__text-checkbox::before,
+.main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox,
+.main-filter__input-checkbox:hover:disabled ~ .main-filter__text-checkbox {
   opacity: 0.1;
 }
 
@@ -908,6 +928,18 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 
   background-color: var(--back-grey);
+  border-radius: 3px;
+}
+
+.main-filter__btn-submit:hover,
+.main-filter__btn-submit:focus {
+  background-color: var(--back-grey-hover);
+}
+
+.main-filter__btn-submit:active {
+  background-color: var(--back-grey-active);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+
 }
 
 /* Sort Filter */
@@ -1006,9 +1038,11 @@ input[type="radio"].visually-hidden {
 }
 
 .pattern {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  min-height: 620px;
+  height: 620px;
   width: 360px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -1017,18 +1051,21 @@ input[type="radio"].visually-hidden {
   border-radius: 3px;
 }
 
-.pattern:hover {
+.pattern:hover,
+.pattern:focus {
   box-shadow: 0px 4px 4px rgba(0, 0 , 0, 0.25);
 }
 
-.pattern:hover::before{
+.pattern:hover::before,
+.pattern:focus::before {
   opacity: 1;
   transition: 0.2s;
 }
 
-.pattern:hover .pattern__wrapper {
+.pattern:hover .pattern__wrapper,
+.pattern:focus .pattern__wrapper {
   display: block;
-  margin-bottom: -2px; /* Понять бы, что двигает все вниз при ховере */
+  /* margin-bottom: -2px; Понять бы, что двигает все вниз при ховере */
   transition: 0.2s;
 }
 
@@ -1054,6 +1091,12 @@ input[type="radio"].visually-hidden {
 }
 
 .pattern__wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  max-height: calc(100% - 40px);
   display: none;
   padding: 27px 50px 40px;
   min-height: 230px;
@@ -1078,7 +1121,21 @@ input[type="radio"].visually-hidden {
   color: var(--black);
 }
 
+.pattern__title a:hover,
+.pattern__title a:focus {
+  color: var(--coral-red);
+}
+
+.pattern__title a:active {
+  color: var(--black);
+  opacity: 0.3;
+  mix-blend-mode: normal;
+}
+
 .pattern__description {
+  overflow: auto;
+  max-height: 360px; /* Число произвольное */
+
   margin-top: 0;
   margin-bottom: 33px;
 
@@ -1160,9 +1217,9 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 }
 
-.patterns__pagination-item:hover a:hover,
-.patterns__pagination-item:focus a:focus {
-  background-color: var(--back-grey-hover);
+.patterns__pagination-item:hover a[href]:hover,
+.patterns__pagination-item a:focus {
+  background-color: var(--back-grey-hover)
 }
 
 .patterns__pagination-item a:active {
