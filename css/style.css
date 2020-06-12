@@ -1065,7 +1065,6 @@ input[type="radio"].visually-hidden {
 .pattern:hover .pattern__wrapper,
 .pattern:focus .pattern__wrapper {
   display: block;
-  /* margin-bottom: -2px; Понять бы, что двигает все вниз при ховере */
   transition: 0.2s;
 }
 
@@ -1133,7 +1132,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pattern__description {
-  overflow: auto;
+  /* overflow: auto; /* Полоса прокрутки есть и при нормальноый высоте =( */
+  overflow: hidden;
   max-height: 360px; /* Число произвольное */
 
   margin-top: 0;
