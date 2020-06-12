@@ -1161,7 +1161,15 @@ input[type="radio"].visually-hidden {
   height: 10px;
 
   opacity: 0.2;
-  outline: 1px solid red;
+}
+
+.sort-filter__order-link:hover,
+.sort-filter__order-link:focus {
+  opacity: 0.6;
+}
+
+.sort-filter__order-link:active {
+  opacity: 1;
 }
 
 .sort-filter__order-link--active {
