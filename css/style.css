@@ -122,6 +122,9 @@ input[type="radio"].visually-hidden {
 
 .header__svg-basket {
   margin-right: 24px;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0; /* При увеличении слов корзина иконка сжимается */
 }
 
 .site-list {
@@ -661,6 +664,8 @@ input[type="radio"].visually-hidden {
 .map__wrapper {
   position: relative;
   z-index: 1;
+  height: 0px; /* Сомнительный костыль?*/
+  /* Если обертка занимает площадб обычной высотой, то с маркером карты нельзя взаймодействовать */
 }
 
 .map__title {

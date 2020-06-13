@@ -222,9 +222,8 @@
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
 
-        <iframe class="map__iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6081737285087!2d30.32153834626057!3d59.9386437000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1591799581097!5m2!1sru!2sru"
-          width="1160" height="416" aria-label="Интерактивная карта"></iframe>
+        <div class="map__iframe" id="map" width="1160" height="416"></div>
+
         <div class="map__wrapper wrapper">
           <div class="map__contacts">
             <h3 class="map__title">Nёrds Design Studio</h3>
@@ -281,7 +280,7 @@
 
     <!-- Модальное окно "Напишите нам" -->
     <!-- modal-callback--opened — класс для показа модалки -->
-    <section class="modal-callback modal-callback--opened">
+    <section class="modal-callback modal-callback--open ed">
       <h2 class="modal-callback__title">Напишите нам</h2>
 
       <form action="https://echo.htmlacademy.ru" class="modal-callback__form">
@@ -307,5 +306,7 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b7ea113c-64a5-4a83-9b36-6cc6e400c461" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
   </body>
 </html>
