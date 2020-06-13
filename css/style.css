@@ -648,8 +648,7 @@ input[type="radio"].visually-hidden {
 .map {
   position: relative;
   min-height: 416px;
-  outline: 2px solid orange;
-  outline-offset: -2px;
+  max-width: 100%;
   padding-top: 54px;
   padding-bottom: 54px;
   box-sizing: border-box;
@@ -665,7 +664,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   z-index: 1;
   height: 0px; /* Сомнительный костыль?*/
-  /* Если обертка занимает площадб обычной высотой, то с маркером карты нельзя взаймодействовать */
+  /* Если обертка занимает площадь обычной высотой, то с маркером карты нельзя взаймодействовать */
 }
 
 .map__title {
@@ -696,6 +695,7 @@ input[type="radio"].visually-hidden {
 }
 
 .map__iframe {
+  overflow: hidden; /* В Opera почему-то горизонтальная прокрутка (???) */
   position: absolute;
   z-index: 0;
   top: 0;
