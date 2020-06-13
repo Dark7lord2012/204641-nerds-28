@@ -24,4 +24,5 @@ ymaps.ready(function () {
 
   myMap.geoObjects.add(myPlacemark);
   myMap.behaviors.disable('scrollZoom'); // Убрать прокрутку карты колесиком мыши
+  myMap.controls.remove('searchControl'); // Удалил поисковую строку, так как оно частично перекрывается контактами
 });
