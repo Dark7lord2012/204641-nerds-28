@@ -1510,6 +1510,7 @@ input[type="radio"].visually-hidden {
   color: var(--white);
 
   background-color: var(--coral-red);
+  border-radius: 3px;
 }
 
 .modal-callback__btn-submit:hover,
@@ -1519,6 +1520,7 @@ input[type="radio"].visually-hidden {
 
 .modal-callback__btn-submit:active {
   background-color: var(--coral-red-active);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .modal-callback__btn-close {
