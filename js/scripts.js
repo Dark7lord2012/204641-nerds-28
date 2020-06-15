@@ -100,7 +100,7 @@ btnSubmitModal.addEventListener('click', function(event) {
 let buttons = document.querySelectorAll('.promo-slider__btn');
 let slides = document.querySelectorAll('.slide');
 
-for (let i = 0; i < buttons.length; i) {
+for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function() {
     // у всех кнопок и слайдов отобрать активные классы
     for (button of buttons) {
