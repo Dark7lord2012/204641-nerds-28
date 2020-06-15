@@ -54,16 +54,14 @@ btnOpenModal.addEventListener('click', function(event) {
   inputName.focus();
 
   if (storageName) {
-    inputName.value = storageName; // не работат в Chrome, но фокус на поле срабатывает
-    console.log(storageName);
+    inputName.value = storageName;
     inputEmail.focus();
   } else {
     inputName.focus();
   }
 
   if (storageEmail) {
-    inputEmail.value = storageEmail; // тоже не работат в Chrome, но фокус на поле срабатывает
-    console.log(storageEmail);
+    inputEmail.value = storageEmail;
     inputComment.focus();
   }
 });
@@ -85,7 +83,6 @@ window.addEventListener('keydown', function(event) {
 
 btnSubmitModal.addEventListener('click', function(event) {
   if (! inputName.value || ! inputEmail.value || ! inputComment.value) {
-    console.log('Bro!');
     event.preventDefault();
     modalCallback.classList.remove('modal-callback--error');
     modalCallback.offsetWidth = modalCallback.offsetWidth; // не понимаю этот хак =(
@@ -94,54 +91,34 @@ btnSubmitModal.addEventListener('click', function(event) {
     if (isStorageSupport) {
       localStorage.setItem('name', inputName.value);
       localStorage.setItem('email', inputEmail.value);
-      console.log('Bruh');
     }
   }
 });
 
-// Слайдер на главной (боже, как топорно!)
+// Слайдер на главной
 
-let buttons = document.querySelectorAll('.promo-slider__btn'); // следы попыток овладеть циклом
-let slides = document.querySelectorAll('slide'); // следы попыток овладеть циклом
-let btnSlide1 = document.querySelector('.promo-slider__btn--1');
-let btnSlide2 = document.querySelector('.promo-slider__btn--2');
-let btnSlide3 = document.querySelector('.promo-slider__btn--3');
-let slide1 = document.querySelector('.slide--1');
-let slide2 = document.querySelector('.slide--2');
-let slide3 = document.querySelector('.slide--3');
+let buttons = document.querySelectorAll('.promo-slider__btn');
+let slides = document.querySelectorAll('.slide');
 
-btnSlide1.addEventListener('click', function() {
-  slide2.classList.remove('slide--active');
-  slide3.classList.remove('slide--active');
-  slide1.classList.add('slide--active');
+for (let i = 0; i < buttons.length; i) {
+  buttons[i].addEventListener('click', function() {
+    // у всех кнопок и слайдов отобрать активные классы
+    for (button of buttons) {
+      button.classList.remove('promo-slider__btn--active');
+    }
 
-  btnSlide1.classList.add('promo-slider__btn--active');
-  btnSlide2.classList.remove('promo-slider__btn--active');
-  btnSlide3.classList.remove('promo-slider__btn--active');
+    for (slide of slides) {
+      slide.classList.remove('slide--active');
+    }
 
-  console.log('!');
-});
+    // задать активный класс текущему по i слайду и кнопке
+    buttons[i].classList.add('promo-slider__btn--active');
+    slides[i].classList.add('slide--active');
+  });
+}
 
-btnSlide2.addEventListener('click', function() {
-  slide1.classList.remove('slide--active');
-  slide3.classList.remove('slide--active');
-  slide2.classList.add('slide--active');
-
-  btnSlide2.classList.add('promo-slider__btn--active');
-  btnSlide1.classList.remove('promo-slider__btn--active');
-  btnSlide3.classList.remove('promo-slider__btn--active');
-
-  console.log('!!');
-});
-
-btnSlide3.addEventListener('click', function() {
-  slide1.classList.remove('slide--active');
-  slide2.classList.remove('slide--active');
-  slide3.classList.add('slide--active');
-
-  btnSlide3.classList.add('promo-slider__btn--active');
-  btnSlide2.classList.remove('promo-slider__btn--active');
-  btnSlide1.classList.remove('promo-slider__btn--active');
-
-  console.log('!!!');
-});
+// наверное можно придумать такой скрипт, который удаляет все кнопки в разметке,
+// считает количество li, и создает по этому числу кнопки в списке,
+// таким образом можно просто добавлять в список еще один слайд и автоматом
+// в списке кнопок появится еще одна кнопка
+// хотя по ТЗ я это делать не должен?
