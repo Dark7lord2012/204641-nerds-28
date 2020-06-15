@@ -98,3 +98,50 @@ btnSubmitModal.addEventListener('click', function(event) {
     }
   }
 });
+
+// Слайдер на главной (боже, как топорно!)
+
+let buttons = document.querySelectorAll('.promo-slider__btn'); // следы попыток овладеть циклом
+let slides = document.querySelectorAll('slide'); // следы попыток овладеть циклом
+let btnSlide1 = document.querySelector('.promo-slider__btn--1');
+let btnSlide2 = document.querySelector('.promo-slider__btn--2');
+let btnSlide3 = document.querySelector('.promo-slider__btn--3');
+let slide1 = document.querySelector('.slide--1');
+let slide2 = document.querySelector('.slide--2');
+let slide3 = document.querySelector('.slide--3');
+
+btnSlide1.addEventListener('click', function() {
+  slide2.classList.remove('slide--active');
+  slide3.classList.remove('slide--active');
+  slide1.classList.add('slide--active');
+
+  btnSlide1.classList.add('promo-slider__btn--active');
+  btnSlide2.classList.remove('promo-slider__btn--active');
+  btnSlide3.classList.remove('promo-slider__btn--active');
+
+  console.log('!');
+});
+
+btnSlide2.addEventListener('click', function() {
+  slide1.classList.remove('slide--active');
+  slide3.classList.remove('slide--active');
+  slide2.classList.add('slide--active');
+
+  btnSlide2.classList.add('promo-slider__btn--active');
+  btnSlide1.classList.remove('promo-slider__btn--active');
+  btnSlide3.classList.remove('promo-slider__btn--active');
+
+  console.log('!!');
+});
+
+btnSlide3.addEventListener('click', function() {
+  slide1.classList.remove('slide--active');
+  slide2.classList.remove('slide--active');
+  slide3.classList.add('slide--active');
+
+  btnSlide3.classList.add('promo-slider__btn--active');
+  btnSlide2.classList.remove('promo-slider__btn--active');
+  btnSlide1.classList.remove('promo-slider__btn--active');
+
+  console.log('!!!');
+});

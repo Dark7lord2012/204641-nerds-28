@@ -235,6 +235,7 @@ input[type="radio"].visually-hidden {
 
   border-radius: 50%;
   background-color: var(--white);
+  cursor: pointer;
 }
 
 .promo-slider__btn--active::after {
