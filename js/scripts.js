@@ -98,5 +98,3 @@ btnSubmitModal.addEventListener('click', function(event) {
     }
   }
 });
-
-localStorage.clear();
