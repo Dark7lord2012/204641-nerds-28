@@ -33,20 +33,19 @@ ymaps.ready(function () {
 let btnOpenModal = document.querySelector('.map__btn-open-modal');
 let modalCallback = document.querySelector('.modal-callback');
 let btnCloseModal = document.querySelector('.modal-callback__btn-close');
-let inputName = document.querySelector('.modal-callback__label--name');
-let inputEmail = document.querySelector('.modal-callback__label--email');
+let inputName = document.querySelector('.modal-callback__input-text--name');
+let inputEmail = document.querySelector('.modal-callback__input-text--email');
 let inputComment = document.querySelector('.modal-callback__textarea');
 let btnSubmitModal = document.querySelector('.modal-callback__btn-submit');
 
 let isStorageSupport = true;
-let storageName = "";
-let storageEmail = "";
 
 try {
-  storageName = localStorage.getItem('name');
-  storageEmail = localStorage.getItem('email');
+  var storageName = localStorage.getItem('name');
+  var storageEmail = localStorage.getItem('email');
 } catch(error) {
   isStorageSupport = false;
+  console.log(error);
 }
 
 btnOpenModal.addEventListener('click', function(event) {
@@ -56,6 +55,7 @@ btnOpenModal.addEventListener('click', function(event) {
 
   if (storageName) {
     inputName.value = storageName; // не работат в Chrome, но фокус на поле срабатывает
+    console.log(storageName);
     inputEmail.focus();
   } else {
     inputName.focus();
@@ -63,6 +63,7 @@ btnOpenModal.addEventListener('click', function(event) {
 
   if (storageEmail) {
     inputEmail.value = storageEmail; // тоже не работат в Chrome, но фокус на поле срабатывает
+    console.log(storageEmail);
     inputComment.focus();
   }
 });
@@ -97,3 +98,5 @@ btnSubmitModal.addEventListener('click', function(event) {
     }
   }
 });
+
+localStorage.clear();
