@@ -902,7 +902,7 @@ input[type="radio"].visually-hidden {
 }
 
 .range__toggle--min {
-  left: 0%; /* Отступ слева + значение */
+  left: 0%;
   transform: translateX(16px);
 }
 
