@@ -100,25 +100,20 @@ btnSubmitModal.addEventListener('click', function(event) {
 let buttons = document.querySelectorAll('.promo-slider__btn');
 let slides = document.querySelectorAll('.slide');
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', function() {
-    // у всех кнопок и слайдов отобрать активные классы
+buttons.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', (evt) => {
     for (button of buttons) {
       button.classList.remove('promo-slider__btn--active');
     }
 
-    for (slide of slides) {
-      slide.classList.remove('slide--active');
-    }
+    evt.target.classList.add('promo-slider__btn--active');
 
-    // задать активный класс текущему по i слайду и кнопке
-    buttons[i].classList.add('promo-slider__btn--active');
-    slides[i].classList.add('slide--active');
-  });
-}
-
-// наверное можно придумать такой скрипт, который удаляет все кнопки в разметке,
-// считает количество li, и создает по этому числу кнопки в списке,
-// таким образом можно просто добавлять в список еще один слайд и автоматом
-// в списке кнопок появится еще одна кнопка
-// хотя по ТЗ я это делать не должен?
+    slides.forEach((slide, slideIndex) => {
+      if (btnIndex === slideIndex) {
+        slide.classList.add('slide--active');
+      } else {
+        slide.classList.remove('slide--active');
+      }
+    })
+  })
+});
