@@ -610,11 +610,13 @@ input[type="radio"].visually-hidden {
 }
 
 .partners__link {
-  display: block;
+  display: flex;
   width: 260px;
   height: 180px;
+  justify-content: center;
+  align-items: center;
 
-  background-image: url("https://via.placeholder.com/200x100");
+  /* background-image: url("https://via.placeholder.com/200x100"); */
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -630,22 +632,18 @@ input[type="radio"].visually-hidden {
   opacity: 0.1;
 }
 
-.partners__link--htmlacademy {
-  background-image: url("../img/htmlacademy-logo.png");
-  background-position: center calc(50% + 7px);
+.partners__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.partners__link--barbershop {
-  background-image: url("../img/barbershop-logo.png");
+.partners__img--htmlacademy {
+  margin-top: 12px;
 }
 
-.partners__link--pink {
-  background-image: url("../img/pink-logo.png");
-}
-
-.partners__link--mishka {
-  background-image: url("../img/mishka-logo.png");
-  background-position: center calc(50% + 5px);
+.partners__img--mishka {
+  margin-top: 5px;
 }
 
 /* Map */
