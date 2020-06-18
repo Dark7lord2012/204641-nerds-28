@@ -347,21 +347,25 @@ input[type="radio"].visually-hidden {
 }
 
 .service {
-  padding-top: 146px;
+  /* padding-top: 146px; */
 
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-.service--1 {
+.service__background {
+  height: 146px;
+}
+
+.service--1 .service__background {
   background-image: url("../img/illustration-1-1.png");
 }
 
-.service--2 {
+.service--2 .service__background {
   background-image: url("../img/illustration-2-1.png");
 }
 
-.service--3 {
+.service--3 .service__background {
   background-image: url("../img/illustration-3-1.png");
 }
 
@@ -387,7 +391,7 @@ input[type="radio"].visually-hidden {
 .service__link-order {
   display: inline-block;
   padding: 16px 40px;
-
+  vertical-align: middle;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
