@@ -991,10 +991,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-filter__input-radio:disabled ~ .main-filter__text-radio::before,
-.main-filter__input-radio:hover:disabled ~ .main-filter__text-radio::before,
+.main-filter__input-radio:hover:disabled ~ .main-filter__text-radio::before {
+  opacity: 0.1;
+}
+
 .main-filter__input-radio:disabled ~ .main-filter__text-radio,
 .main-filter__input-radio:hover:disabled ~ .main-filter__text-radio {
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 /* Чекбоксы */
@@ -1036,10 +1039,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox::before,
-.main-filter__input-checkbox:hover:disabled ~ .main-filter__text-checkbox::before,
+.main-filter__input-checkbox:hover:disabled ~ .main-filter__text-checkbox::before {
+  opacity: 0.1;
+}
+
 .main-filter__input-checkbox:disabled ~ .main-filter__text-checkbox,
 .main-filter__input-checkbox:hover:disabled ~ .main-filter__text-checkbox {
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 /* Параметры текста заголовков основного фильтра */
