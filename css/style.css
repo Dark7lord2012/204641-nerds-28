@@ -352,8 +352,6 @@ input[type="radio"].visually-hidden {
 }
 
 .service {
-  /* padding-top: 146px; */
-
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -451,7 +449,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   padding-top: 40px;
   padding-bottom: 74px;
-  /* border-bottom: 2px solid var(--back-grey); */
 }
 
 .description-nerds__table-logo-wrapper {
@@ -582,14 +579,12 @@ input[type="radio"].visually-hidden {
 
 .partners__list {
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   border-top: 2px solid var(--back-grey);
   border-bottom: 2px solid var(--back-grey);
 
-  /* outline: 1px solid red; */
   list-style: none;
 }
 
@@ -859,8 +854,6 @@ input[type="radio"].visually-hidden {
 /* Диапазон цен */
 
 .main-filter__fieldset--price {
-  /* height: 210px; */
-  /* width: 260px; */
   align-items: flex-start;
   margin-bottom: 54px;
   box-sizing: border-box;
@@ -879,7 +872,6 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 
   background-color: var(--back-range-grey);
-  /* outline: 1px solid red; */
   border-radius: 5px;
 }
 
@@ -1312,7 +1304,6 @@ input[type="radio"].visually-hidden {
 }
 
 .pattern__description {
-  /* overflow: auto; /* Полоса прокрутки есть и при нормальноый высоте =( */
   overflow: hidden;
   max-height: 360px; /* Число произвольное */
 
@@ -1415,11 +1406,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   left: calc(50% - 480px);
   top: calc(50% - 295px);
-  /* left: 50%;
-  top: 50%; */
-  /* transform: translate(-50%, -50%); */
 
-  /* display: flex; */
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
