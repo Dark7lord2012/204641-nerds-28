@@ -10,6 +10,11 @@
   --back-toggle-shadow-grey: #cfcfcf;
 
   --black: #000000;
+  --black-40: rgba(0, 0, 0, 0.4);
+  --black-30: rgba(255, 255, 255, 0.3);
+  --black-25: rgba(0, 0 , 0, 0.25);
+  --black-10: rgba(0, 0, 0, 0.1);
+  --black-shadow-10: rgba(0, 1, 1, 0.1);
   --white: #ffffff;
 
   --border: #d7dcde;
@@ -325,9 +330,9 @@ input[type="radio"].visually-hidden {
 }
 
 .slide__link-to-more:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--black-30);
   background-color: var(--coral-red-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 /* Services */
@@ -409,9 +414,9 @@ input[type="radio"].visually-hidden {
 }
 
 .service__link-order:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--black-30);
   background-color: var(--coral-red-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 .service__link-order--green {
@@ -744,7 +749,7 @@ input[type="radio"].visually-hidden {
 
 .map__btn-open-modal:active {
   background-color: var(--coral-red-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 /* Footer */
@@ -798,7 +803,7 @@ input[type="radio"].visually-hidden {
 }
 
 .social__link:active {
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 .social__link:active .social__svg {
@@ -1095,7 +1100,7 @@ input[type="radio"].visually-hidden {
 
 .main-filter__btn-submit:active {
   background-color: var(--back-grey-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 
 }
 
@@ -1219,7 +1224,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   height: 620px;
   width: 360px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--black-10);
   box-sizing: border-box;
   overflow: hidden;
 
@@ -1228,7 +1233,7 @@ input[type="radio"].visually-hidden {
 
 .pattern:hover,
 .pattern:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0 , 0, 0.25);
+  box-shadow: 0px 4px 4px var(--black-25);
 }
 
 .pattern:hover::before,
@@ -1399,7 +1404,7 @@ input[type="radio"].visually-hidden {
 
 .patterns__pagination-item a[href]:active {
   background-color: var(--back-grey-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 /* Modal Callback */
@@ -1424,7 +1429,7 @@ input[type="radio"].visually-hidden {
   padding: 63px 100px 84px;
 
   background-color: var(--white);
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 40px var(--black-40);
   animation: bounce 0.6s;
 }
 
@@ -1538,7 +1543,7 @@ input[type="radio"].visually-hidden {
 
 .modal-callback__btn-submit:active {
   background-color: var(--coral-red-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--black-shadow-10);
 }
 
 .modal-callback__btn-close {
