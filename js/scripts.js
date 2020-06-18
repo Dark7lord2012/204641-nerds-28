@@ -87,9 +87,9 @@ btnSubmitModal.addEventListener('click', function(event) {
     modalCallback.classList.remove('modal-callback--error');
     modalCallback.offsetWidth = modalCallback.offsetWidth; // не понимаю этот хак =(
       modalCallback.classList.add('modal-callback--error');
-      inputName.setAttribute('required', '');
-      inputEmail.setAttribute('required', '');
-      inputComment.setAttribute('required', '');
+      inputName.required = true;
+      inputEmail.required = true;
+      inputComment.required = true;
   } else {
     if (isStorageSupport) {
       localStorage.setItem('name', inputName.value);
