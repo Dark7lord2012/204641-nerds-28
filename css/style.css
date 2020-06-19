@@ -351,25 +351,25 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.service {
+.service__background {
   background-repeat: no-repeat;
   background-position: center top;
-}
-
-.service__background {
   height: 146px;
 }
 
 .service--1 .service__background {
   background-image: url("../img/illustration-1-1.png");
+  background-color: var(--coral-red);
 }
 
 .service--2 .service__background {
   background-image: url("../img/illustration-2-1.png");
+  background-color: var(--green);
 }
 
 .service--3 .service__background {
   background-image: url("../img/illustration-3-1.png");
+  background-color: var(--yellow);
 }
 
 .service__title {
