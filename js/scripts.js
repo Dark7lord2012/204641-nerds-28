@@ -120,3 +120,70 @@ buttons.forEach((btn, btnIndex) => {
     })
   })
 });
+
+
+// Ползунок диапазона цен в "Магазине"
+
+let startPriceInput = document.querySelector('#start-price');
+let endPriceInput = document.querySelector('#end-price');
+let rangeToggleMin = document.querySelector('.range__toggle--min');
+let rangeToggleMax = document.querySelector('.range__toggle--max');
+let rangeBar = document.querySelector('.range__bar');
+
+rangeToggleMin.addEventListener('mousedown', (evt) => {
+  let startX = evt.clientX;
+
+  let onMouseMove = (moveEvt) => {
+    let shift = startX - moveEvt.clientX;
+    startX = moveEvt.clientX;
+    rangeToggleMin.style.left = (rangeToggleMin.offsetLeft - shift) + `px`;
+
+    if ((rangeToggleMin.offsetLeft - shift) < 0) {
+      rangeToggleMin.style.left = 0 + 'px';
+    }
+
+    if ((rangeToggleMin.offsetLeft - shift) > 220) {
+      rangeToggleMin.style.left = 220 + 'px';
+    }
+
+    startPriceInput.value = Math.floor(rangeToggleMin.style.left.slice(0, -2) / 220 * startPriceInput.max);
+    rangeBar.style.marginLeft = rangeToggleMin.style.left;
+  };
+
+  let onMouseUp = function (upEvt) {
+    document.removeEventListener(`mousemove`, onMouseMove);
+    document.removeEventListener(`mouseup`, onMouseUp);
+  };
+
+  document.addEventListener(`mousemove`, onMouseMove);
+  document.addEventListener(`mouseup`, onMouseUp);
+});
+
+rangeToggleMax.addEventListener('mousedown', (evt) => {
+  let startX = evt.clientX;
+
+  let onMouseMove = (moveEvt) => {
+    let shift = startX - moveEvt.clientX;
+    startX = moveEvt.clientX;
+    rangeToggleMax.style.left = (rangeToggleMax.offsetLeft - shift) + `px`;
+
+    if ((rangeToggleMax.offsetLeft - shift) < 0) {
+      rangeToggleMax.style.left = 0 + 'px';
+    }
+
+    if ((rangeToggleMax.offsetLeft - shift) > 220) {
+      rangeToggleMax.style.left = 220 + 'px';
+    }
+
+    endPriceInput.value = Math.floor(rangeToggleMax.style.left.slice(0, -2) / 220 * endPriceInput.max);
+    rangeBar.style.marginRight = 220 - rangeToggleMax.style.left.slice(0, -2) + 'px';
+  };
+
+  let onMouseUp = function (upEvt) {
+    document.removeEventListener(`mousemove`, onMouseMove);
+    document.removeEventListener(`mouseup`, onMouseUp);
+  };
+
+  document.addEventListener(`mousemove`, onMouseMove);
+  document.addEventListener(`mouseup`, onMouseUp);
+});

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="header">
@@ -60,20 +60,20 @@
                 <div class="range__controls">
                   <div class="range__scale">
                     <div class="range__bar"></div>
+                    <div class="range__toggle range__toggle--min" tabindex="0" aria-label="Ползунок минимальной цены ценового фильтра"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0" aria-label="Ползунок максимальной цены ценового фильтра"></div>
                   </div>
-                  <div class="range__toggle range__toggle--min" tabindex="0" aria-label="Ползунок минимальной цены ценового фильтра"></div>
-                  <div class="range__toggle range__toggle--max" tabindex="0" aria-label="Ползунок максимальной цены ценового фильтра"></div>
                 </div>
               </div>
 
               <div class="main-filter__price-controls">
                 <label class="main-filter__label-number">
                   От
-                  <input class="main-filter__number" type="number" name="start-price" min="0" max="19999" value="0">
+                  <input class="main-filter__number" type="number" name="start-price" min="0" max="19999" value="0" id="start-price">
                 </label>
                 <label class="main-filter__label-number">
                   До
-                  <input class="main-filter__number" type="number" name="end-price" min="0" max="20000" value="15000">
+                  <input class="main-filter__number" type="number" name="end-price" min="1" max="20000" value="15000" id="end-price">
                 </label>
               </div>
             </fieldset>
@@ -343,6 +343,6 @@
       </button>
     </section>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b7ea113c-64a5-4a83-9b36-6cc6e400c461"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

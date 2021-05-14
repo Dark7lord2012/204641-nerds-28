@@ -879,7 +879,8 @@ input[type="radio"].visually-hidden {
 }
 
 .range__bar {
-  width: 70%;
+  width: auto;
+  box-sizing: content-box;
   height: 2px;
 
   background-color: var(--green);
@@ -898,16 +899,15 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--back-toggle-shadow-grey);
   cursor: pointer;
+  transform: translateX(10px);
 }
 
 .range__toggle--min {
-  left: 0%;
-  transform: translateX(16px);
+  left: 0;
 }
 
 .range__toggle--max {
-  left: 70%;
-  transform: translateX(-23px);
+  left: 220px;
 }
 
 .main-filter__price-controls {
